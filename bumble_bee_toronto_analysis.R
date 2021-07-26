@@ -13,7 +13,7 @@ library(ade4)
 ###########################################################################################################
 # Making correlations plot
 
-df = read.csv('/Users/imrit/Downloads/Bumble_bee_data/merged_col_final_ind_cols_renamed.csv')
+df = read.csv('/filepath/toronto_bumble_bees_grid.csv')
 
 df$aveMeanFD = log1p(df$aveMeanFD)  # log transform mean foraging distance
 
