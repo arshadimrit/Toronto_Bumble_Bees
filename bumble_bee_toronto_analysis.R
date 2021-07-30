@@ -76,6 +76,12 @@ vif_pruned_rda = rda(df_pred_response[, c(1,2)] ~
 RsquareAdj(vif_pruned_rda)
 summary(vif_pruned_rda)
 
+anova_global = anova(vif_pruned_rda, step=1000) # testing the significance of the RDA model
+anova_axis = anova.cca(vif_pruned_rda, by='axis', step=1000)
+
+anova_global
+anova_axis
+
 # Trying to make beautiful rda plot
 
 rda_summary = summary(vif_pruned_rda)
